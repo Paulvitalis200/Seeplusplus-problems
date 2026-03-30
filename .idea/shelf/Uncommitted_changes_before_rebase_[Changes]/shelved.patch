@@ -1,0 +1,17 @@
+Index: main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.cpp b/main.cpp
+new file mode 100644
+--- /dev/null	(date 1774834658538)
++++ b/main.cpp	(date 1774834658538)
+@@ -0,0 +1,6 @@
++#include <iostream>
++
++int main() {
++    std::cout << "Hello world" << std::endl;
++    return 0;
++}
+\ No newline at end of file
