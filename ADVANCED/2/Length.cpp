@@ -23,3 +23,14 @@ bool Length::operator==(const Length& other) const {
 std::strong_ordering Length::operator<=>(const Length& other) const {
     return value <=> other.value;
 }
+
+Length Length::operator+=(const Length& other) {
+    value += other.value;
+    return *this;
+}
+
+Length Length::operator+(const Length& other) {
+    Length result = *this;
+    result += other.value;
+    return result;
+}

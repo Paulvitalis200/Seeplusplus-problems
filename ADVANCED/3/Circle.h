@@ -1,0 +1,8 @@
+#ifndef SEEPLUSPLUS_CIRCLE_H
+#define SEEPLUSPLUS_CIRCLE_H
+
+class Circle {
+
+};
+
+#endif //SEEPLUSPLUS_CIRCLE_H

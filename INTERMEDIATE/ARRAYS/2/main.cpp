@@ -1,25 +1,23 @@
 // Write a function int sum(int numbers[], int size) that returns the sum of an array.
-// Call it from main. Then explain in a comment why you can't just use std::size() inside the function.
+//  Call it from main. Then explain in a comment why you can't just use std::size() inside the function.
 
 #include <iostream>
 #include <iterator>
 
-int sum(int numbers[], int size) {
-    int currentSum = 0;
-
-    // We can't just use std::size() because the numbers int array passed decays into a pointer. We can't do std::size(numbers)
-    for (int i = 0; i < size; i++) {
-        currentSum += numbers[i]; // Same as *(numbers + i)
-    }
-    return currentSum;
-}
+int sum(int numbers[], int size);
 
 int main() {
-    int numbers[] = {10, 20, 30, 40, 50};
+    int numbers[] = {1,2,3,4,5,6,7,8,9,10};
 
-    int result = sum(numbers, std::size(numbers));
-
-    std::cout << result << std::endl;
-    
+    std::cout << sum(numbers, std::size(numbers)) << std::endl;
     return 0;
+}
+
+int sum(int numbers[], int size) {
+    // We can't call size() directly on numbers because numbers is a pointer when passed into a function
+    int currentSum = 0;
+    for (int i = 0; i < size; i++) {
+        currentSum += numbers[i];
+    }
+    return currentSum;
 }

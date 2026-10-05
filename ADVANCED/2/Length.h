@@ -14,6 +14,8 @@ public:
     bool operator==(const Length& other) const;
     std::strong_ordering operator<=>(const Length& other) const;
     int getLength() const;
+    Length operator+=(const Length& other);
+    Length operator+(const Length& other) const;
 private:
     int value;
 };
